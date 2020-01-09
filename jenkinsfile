@@ -5,10 +5,10 @@ pipeline{
 }
 
   stages{
-    stage('S3 - create bucket'){
+    stage('S3-create bucket'){
       steps{
         script{
-          creates3bucket('codepipeline-ap-south-1-375760871170')
+          createbucket('codepipeline-ap-south-1-375760871170')
          }
        }
     }
@@ -35,6 +35,6 @@ def getTerraformPath(){
       def tfHome=tool name: 'terraform-app', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
       return tfHome
 }
-def creates3bucket(bucketName){
-  sh returnStatus: true, script: "aws s3 mb ${bucketName} --region=ap-south-1"
+def createbucket(bucket){
+  sh returnStatus: true, script: "aws s3 mb ${bucket} --region=ap-south-1"
 }
