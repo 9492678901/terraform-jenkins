@@ -8,7 +8,7 @@ pipeline{
     stage('S3 - create bucket'){
       steps{
         script{
-          createS3Bucket('bhargav2345')
+          createS3Bucket('javahome9441.in.k8s')
          }
        }
     }
