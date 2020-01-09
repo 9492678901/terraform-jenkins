@@ -8,7 +8,7 @@ pipeline{
     stage('S3 - create bucket'){
       steps{
         script{
-          createS3Bucket('bhargav-123')
+          createS3Bucket('bhargavbucket123')
          }
        }
     }
