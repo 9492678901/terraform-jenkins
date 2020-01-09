@@ -8,7 +8,7 @@ pipeline{
     stage('S3-create bucket'){
       steps{
         script{
-          createbucket('codepipeline-ap-south-1-375760871170')
+          createbucket('bhargav-123')
          }
        }
     }
