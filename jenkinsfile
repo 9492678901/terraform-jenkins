@@ -8,7 +8,7 @@ pipeline{
     stage('S3 - create bucket'){
       steps{
         script{
-          creates3bucket('javahome9441.in.k8s')
+          creates3bucket('codepipeline-ap-south-1-375760871170')
          }
        }
     }
